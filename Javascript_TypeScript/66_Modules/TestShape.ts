@@ -1,0 +1,19 @@
+// TestShape.ts 
+import shape = require("./IShape"); 
+import circle = require("./Circle"); 
+import triangle = require("./Triangle");  
+
+function drawAllShapes(shapeToDraw: shape.IShape) {
+   shapeToDraw.draw(); 
+} 
+
+drawAllShapes(new circle.Circle()); 
+drawAllShapes(new triangle.Triangle()); 
+
+/* 
+The command to compile the main TypeScript file for AMD systems is −
+
+tsc --module amd TestShape.ts
+On compiling, it will generate following JavaScript code for AMD.
+
+*/
